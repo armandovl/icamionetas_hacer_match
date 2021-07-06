@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!--Importar los iconos de google-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+  <!--instalamos jquery-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+   <?!= include("4.-page-css");?>
+
+</head>
+  <body>
+  <!--agregamos una barra de navegación-->
+  <nav class="green accent-3"> <!-- color -->
+    <div class="nav-wrapper container"> <!--container = centrado -->
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Sass</a></li>
+        <li><a href="#">Components</a></li>
+        <li><a href="#">Javascript</a></li>
+        <li><a href="#">Mobile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--agregamos una barra de lateral-->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#"><i class="material-icons left">send</i>Sass</a></li>
+    <li><a href="#">Components</a></li>
+    <li><a href="#">Javascript</a></li>
+    <li><a href="#"><i class="material-icons left">archive</i>Mobile</a></li>
+  </ul>
+    
+  	<!-- para poner tarjeta-->
+    <div class="container section">
+      <div class="row">
+          <form class="col s12">
+              <div class="row card-panel  sombreadoGrueso">
+                      
+                      <!--aqui va el select-->
+                        <div class="input-field col s12 m6 l4">
+                        <select id="nombre" onChange="sacandoNombre()">
+                          <option value="" disabled selected>Selecciona el nombre</option>
+                          <option value="Armando">Armando</option>
+                          <option value="Yoseline">Yoseline</option>
+                          <option value="Egan Namir">Egan Namir</option>
+                          <option value="Agnes">Agnes</option>
+                        </select>
+                        <label>Nombre</label>
+                      </div>
+
+                      <!--- aqui va correo-->
+                      <div class="input-field col s12 m6 l4">
+                      <i class="material-icons prefix">email</i>
+                      <input type="text" id="correo" value="aquí va mail" disabled>
+                      </div>
+                      
+                      <!--- aqui va escolaridad-->
+                      <div class="input-field col s12 m6 l4">
+                      <i class="material-icons prefix">school</i>
+                      <input type="text" id="escolaridad" value="escolaridad" disabled>
+                      </div>
+
+                      <!--- aqui va ciudad-->
+                      <div class="input-field col s12 m6 l4">
+                      <i class="material-icons prefix">location_city</i>
+                      <input type="text" id="ciudad" value="ciudad" disabled>
+                      </div>                         
+              </div> <!--tarjeta fin-->
+          </form>
+        <button class="btn sombreadoGrueso" id="botonEnviar">Enviar</button> <!-- importante el boton va fuera del form -->
+        <button class="btn sombreadoGrueso" id="botonProvisional">Provisional</button> <!-- importante el boton va fuera del form --> 
+      </div>
+    </div>
+  
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <?!= include("2.-page-js");?>
+    <?!= include("5.-materialize-js");?>
+
+  </body>
+</html>

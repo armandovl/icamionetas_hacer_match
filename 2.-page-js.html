@@ -1,0 +1,33 @@
+ <script type="text/javascript">
+	
+    // al hacer click en el boton se ejecuta la funcion script enviar sheet
+    document.getElementById("botonProvisional").addEventListener("click",sacandoNombre);
+
+    //sacando el valor del select
+    function sacandoNombre(){
+      var valorNombre=document.getElementById("nombre").value;
+      //alert(valorNombre);
+      google.script.run
+      .withSuccessHandler(cambiarInput) //funcion si si funciona y recibe parametro inmediato
+      .buscarPorParametro(valorNombre);
+    }
+
+    function cambiarInput(parametroDesdeGAS){
+      var inputCorreo = document.getElementById("correo");
+      inputCorreo.value=parametroDesdeGAS[0];
+
+      var inputEscolaridad = document.getElementById("escolaridad");
+      inputEscolaridad.value=parametroDesdeGAS[1];
+
+      var inputCiudad = document.getElementById("ciudad");
+      inputCiudad.value=parametroDesdeGAS[2];
+    }
+      
+   </script>
+
+
+
+
+
+
+
